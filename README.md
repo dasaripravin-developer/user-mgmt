@@ -41,7 +41,7 @@ This project is a scalable RESTful API built with Node.js and postgresSQL for ma
 
 ### Deployment on AWS cloud
 
-I deployed the user management application on the AWS cloud(EC2 Instance). Please use the 13.127.161.117 public IP address to test the API's
+I deployed the user management application on the AWS cloud(EC2 Instance). Please use the 13.126.35.226 public IP address to test the API's
 
 ### Setup
 
@@ -96,8 +96,7 @@ SECRET_KEY='THIS IS SECRETE KEY'
 
 ```
 
-4. Database migration setup
-    We can do database creation, migration and seeding in single command and also individual
+4. Database migration setup - We can do database creation, migration and seeding in single command and also individual
 
     - Setup in single command
 ```bash
