@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "292f4037-f9bb-4e66-b1a9-97569f7bbc42",
+		"name": "User-Mgmt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30417568"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"pravin\",\n    \"lastName\": \"dasari\",\n    \"email\": \"one1@gmail.com\",\n    \"password\": \"pravin123\",\n    \"phone\": 1236547890\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3000/register",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"one@gmail.com\",\n    \"password\": \"pravin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3000/login",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get role",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlSWQiOiIxIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTcyOTc5OTE3OCwiZXhwIjoxNzI5Nzk5Nzc4fQ.2aHJ8I1k4fUQWg8lgZEInW3gNtm_tbzglZterYTAbjc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/role",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"role"
+					],
+					"query": [
+						{
+							"key": "autho",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assign-role to user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlSWQiOiIzIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTcyOTc5OTkxOSwiZXhwIjoxNzI5ODAwNTE5fQ.k3xoxDQ_yWt-hBb9rpKSaFPqWZtRWqz3LN__BVtgU5Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 2,\n    \"roleId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3000/admin/assign-role-to-user",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"assign-role-to-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiZmlyc3ROYW1lIjoicHJhdmluIiwibGFzdE5hbWUiOiJkYXNhcmkiLCJlbWFpbCI6Im9uZUBnbWFpbC5jb20iLCJyb2xlSWQiOiIzIiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTcyOTgwMzE5MCwiZXhwIjoxNzI5ODAzNzkwfQ.3P_riaagHLkOMjqFkZBhaR5RRfETUcSKTodEkOabR10",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/user/2",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzIiwiZmlyc3ROYW1lIjoicHJhdmluIiwibGFzdE5hbWUiOiJkYXNhcmkiLCJlbWFpbCI6Im9uZTFAZ21haWwuY29tIiwicm9sZUlkIjoiMiIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3Mjk4MDMzMjYsImV4cCI6MTcyOTgwMzkyNn0.ILM9t1oxCyyPUdxGqHADXhwE2MhxfwbXVNoQy1DoveY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"hello\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3000/user",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get users by filters",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlSWQiOiIxIiwicGhvbmUiOiI4ODg4MTQ5OTY2IiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTcyOTgwNzcyOCwiZXhwIjoxNzI5ODA4MzI4fQ._CSexB8sSWC2GRkeuMC1tGCFvFFhsjLg76g4IMWDK20",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"roleId\": 2,\n    \"firstName\": \"pravin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3000/user",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
