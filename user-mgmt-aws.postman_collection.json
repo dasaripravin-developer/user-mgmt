@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "0a9cd283-b11c-4d57-a31a-954409735b0c",
+		"name": "user-mgmt-aws",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30417568"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"pravin\",\n    \"lastName\": \"dasari\",\n    \"email\": \"one1@gmail.com\",\n    \"password\": \"pravin123\",\n    \"phone\": \"1234567890\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.126.35.226/register",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"35",
+						"226"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"one1@gmail.com\",\n    \"password\": \"pravin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.126.35.226/login",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"35",
+						"226"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzIiwiZmlyc3ROYW1lIjoicHJhdmluIiwibGFzdE5hbWUiOiJkYXNhcmkiLCJlbWFpbCI6Im9uZTFAZ21haWwuY29tIiwicm9sZUlkIjoiMiIsInBob25lIjoiMTIzNDU2Nzg5MCIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3Mjk4MTU5MTksImV4cCI6MTcyOTgxNjUxOX0.OdN53MbOveE8IoKN8b63YI3bMYnNWpkNd8Rv4unjaB4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.126.35.226/user/2",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"35",
+						"226"
+					],
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user data",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzIiwiZmlyc3ROYW1lIjoicHJhdmluIiwibGFzdE5hbWUiOiJkYXNhcmkiLCJlbWFpbCI6Im9uZTFAZ21haWwuY29tIiwicm9sZUlkIjoiMiIsInBob25lIjoiMTIzNDU2Nzg5MCIsImlzQWN0aXZlIjp0cnVlLCJpYXQiOjE3Mjk4MTU5MTksImV4cCI6MTcyOTgxNjUxOX0.OdN53MbOveE8IoKN8b63YI3bMYnNWpkNd8Rv4unjaB4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"krushna\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.126.35.226/user",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"35",
+						"226"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlSWQiOiIxIiwicGhvbmUiOiI4ODg4MTQ5OTY2IiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTcyOTgxNjIzMiwiZXhwIjoxNzI5ODE2ODMyfQ.tFCu1IyXr2s4Vbv0CEoQ87B3gw4vfaN8twMqtL13c3Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.126.35.226/user",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"35",
+						"226"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get role",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlSWQiOiIxIiwicGhvbmUiOiI4ODg4MTQ5OTY2IiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTcyOTgxNjIzMiwiZXhwIjoxNzI5ODE2ODMyfQ.tFCu1IyXr2s4Vbv0CEoQ87B3gw4vfaN8twMqtL13c3Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.126.35.226/role",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"35",
+						"226"
+					],
+					"path": [
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "assign role to user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlSWQiOiIxIiwicGhvbmUiOiI4ODg4MTQ5OTY2IiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTcyOTgxNjIzMiwiZXhwIjoxNzI5ODE2ODMyfQ.tFCu1IyXr2s4Vbv0CEoQ87B3gw4vfaN8twMqtL13c3Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 3,\n    \"roleId\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://13.126.35.226/admin/assign-role-to-user",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"35",
+						"226"
+					],
+					"path": [
+						"admin",
+						"assign-role-to-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiZmlyc3ROYW1lIjoiQWRtaW4iLCJsYXN0TmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlSWQiOiIxIiwicGhvbmUiOiI4ODg4MTQ5OTY2IiwiaXNBY3RpdmUiOnRydWUsImlhdCI6MTcyOTgxNjIzMiwiZXhwIjoxNzI5ODE2ODMyfQ.tFCu1IyXr2s4Vbv0CEoQ87B3gw4vfaN8twMqtL13c3Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://13.126.35.226/user/2",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"35",
+						"226"
+					],
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
