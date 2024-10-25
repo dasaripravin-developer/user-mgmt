@@ -142,6 +142,13 @@ server {
 
 ```
 
+6. Install postgresSQL database
+    I have created docker-compose file for postgresSQL database. You get the docker-compose file at root folder. Execute the below command to start postgresSQL database in docker.
+
+```bash
+    docker-compose up -d
+```
+
 The server will be running on http://localhost:3000
 
 You can test the below API's by importing postman json file. find the User-Mgmt.postman_collection.json file in repository, Import the same file in postman. You will get all API test.
